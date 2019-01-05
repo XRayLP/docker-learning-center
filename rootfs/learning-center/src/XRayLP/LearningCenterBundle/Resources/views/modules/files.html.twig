@@ -1,0 +1,60 @@
+{% extends '@LearningCenter/base.html.twig' %}
+
+{% block javascripts %}
+    <script>
+        $(document).ready(function () {
+            Dropzone.options.dropzoneForm = {
+                maxFiles: 1,
+                dictMaxFilesExceeded: 'Only 1 Image can be uploaded',
+                maxFilesize: 3,  // in Mb
+                addRemoveLinks: true,
+                init: function () {
+                    this.on("maxfilesexceeded", function(file) {
+                        this.removeFile(file);
+                    });
+                    this.on("sending", function(file, xhr, formData) {
+                        // send additional data with the file as POST data if needed.
+                        // formData.append("key", "value");
+                    });
+                    this.on("success", function(file, response) {
+                        /*var files = ;
+                        $('.files').html(' ');
+                        $('.files').append(files);*/
+                    });
+            }}
+        });
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var $groupType = $('#groupType');
+            // When sport gets selected ...
+            $groupType.change(function () {
+                // ... retrieve the corresponding form.
+                var $form = $(this).closest('form');
+                // Simulate form data, but only include the selected sport value.
+                var data = {};
+                data[$groupType.attr('name')] = $groupType.val();
+                // Submit data via AJAX to the form's action path.
+                $.ajax({
+                    url: '{{ url('learningcenter_files') }}',
+                    type: $form.attr('method'),
+                    data: data,
+                    success: function (html) {
+                        // Replace current position field ...
+                        $('#memberGroups').replaceWith(
+                            // ... with the returned one from the AJAX response.
+                            $(html).find('#memberGroups')
+                        );
+                        // Position field now displays the appropriate positions.
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block main %}
+    {{ include('@LearningCenter/modules/filemanager/filemanager.html.twig', {'files': files, 'breadcrumb': breadcrumb, 'usedSpace': usedSpace, 'upload': upload, 'create_directory': create_directory, 'download': download, 'delete': delete, 'share': share, 'share_edit': share_edit}) }}
+{% endblock %}

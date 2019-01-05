@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<!--
+  ~ @link https://github.com/XRayLP/learning-center-bundle
+  ~ @copyright Copyright (c) 2018 Niklas Loos <https://github.com/XRayLP>
+  ~ @license GPL-3.0 <https://github.com/XRayLP/learning-center-bundle/blob/master/LICENSE>
+  -->
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file original="file.ext" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="welcome.text">
+                <source>Welcome %name%, in the Learning Center of the School %schoolname%.</source>
+                <target>Wilkommen %name%, in der Lernumgebung der Schule %schoolname%.</target>
+            </trans-unit>
+            <trans-unit id="home">
+                <source>Home</source>
+                <target>Startseite</target>
+            </trans-unit>
+            <trans-unit id="catalog">
+                <source>Catalog</source>
+                <target>Lernkatalog</target>
+            </trans-unit>
+            <trans-unit id="files">
+                <source>Filemanager</source>
+                <target>Mein Speicher</target>
+            </trans-unit>
+            <trans-unit id="grade">
+                <source>Grade</source>
+                <target>Meine Klasse</target>
+            </trans-unit>
+            <trans-unit id="projects">
+                <source>Projects</source>
+                <target>Meine Projekte</target>
+            </trans-unit>
+            <trans-unit id="lists">
+                <source>Lists</source>
+                <target>Listen</target>
+            </trans-unit>
+            <trans-unit id="lc.invalidLogin">
+                <source>Login failed (note that usernames and passwords are case-sensitive)!</source>
+                <target>Anmeldung fehlgeschlagen (Benutzernamen und Passwörter unterscheiden zwischen Groß- und Kleinschreibung)!</target>
+            </trans-unit>
+            <trans-unit id="lc.accountLocked">
+                <source>This account has been locked! You can log in again in %d minutes.</source>
+                <target>Das Konto wurde gesperrt! Sie können sich in %d Minuten erneut anmelden.</target>
+            </trans-unit>
+            <trans-unit id="catalog.no.files">
+                <source>catalog.no.files</source>
+                <target>Es sind keine geteilten Dateien für dich vorhanden.</target>
+            </trans-unit>
+            <trans-unit id="project.no.projects">
+                <source>project.no.projects</source>
+                <target>Du bist an keinen Projekten beteiligt.</target>
+            </trans-unit>
+            <trans-unit id="project.need.confirm">
+                <source>project.need.confirm</source>
+                <target>Das Projekt muss noch vom Gruppenleiter bestätigt werden um die vollen Funktionen freizuschalten.</target>
+            </trans-unit>
+            <trans-unit id="project.confirmed">
+                <source>project.confirmed</source>
+                <target>Das Projekt %name% wurde vom Gruppenleiter bestätigt und besitzt nun die vollen Funktionen.</target>
+            </trans-unit>
+            <trans-unit id="project.confirm">
+                <source>project.confirm</source>
+                <target>Bestätigen</target>
+            </trans-unit>
+            <trans-unit id="project.confirm.confirm">
+                <source>project.confirm.confirm</source>
+                <target>Wollen Sie wirklich das Projekt %name% bestätigen?</target>
+            </trans-unit>
+            <trans-unit id="project.decline">
+                <source>project.decline</source>
+                <target>Ablehnen</target>
+            </trans-unit>
+            <trans-unit id="project.decline.confirm">
+                <source>project.decline.confirm</source>
+                <target>Wollen Sie wirklich das Projekt %name% ablehnen.</target>
+            </trans-unit>
+            <trans-unit id="project.confirm.now">
+                <source>project.confirm.now</source>
+                <target>Bestätigen Sie als Gruppenleiter das Projekt jetzt!</target>
+            </trans-unit>
+            <trans-unit id="project.create.member.message">
+                <source>project.create.member.message</source>
+                <target>Das Projekt %name% wurde erfolgreich erstellt.</target>
+            </trans-unit>
+            <trans-unit id="project.create.member.message.need.confirm">
+                <source>project.create.member.message.need.confirm</source>
+                <target>Das Projekt %name% wurde erfolgreich erstellt, jedoch um alle Funktionen frei zu schalten muss das Projekt noch vom Gruppenleiter bestätigt werden.</target>
+            </trans-unit>
+            <trans-unit id="project.create.leader.message.confirm">
+                <source>project.create.leader.message.confirm</source>
+                <target>Sie wurden von dem Nutzer %user% vorgeschlagen Gruppenleiter für das Projekt %name% zu werden. Bestätigen Sie dies bitte damit alle Funktionen des Projektes freigeschaltet werden..</target>
+            </trans-unit>
+            <trans-unit id="project.members.options">
+                <source>project.members.options</source>
+                <target>Optionen</target>
+            </trans-unit>
+            <trans-unit id="project.members.options.goto">
+                <source>project.members.options.goto</source>
+                <target>Mitgliedsdetails</target>
+            </trans-unit>
+            <trans-unit id="project.members.options.remove">
+                <source>project.members.options.remove</source>
+                <target>Entferne Mitglied</target>
+            </trans-unit>
+            <trans-unit id="project.members.options.degrade.member">
+                <source>project.members.options.degrade.member</source>
+                <target>Zum Mitglied degradieren</target>
+            </trans-unit>
+            <trans-unit id="project.members.options.promote.admin">
+                <source>project.members.options.promote.admin</source>
+                <target>Befördern zum Admin</target>
+            </trans-unit>
+            <trans-unit id="project.members.options.promote.leader">
+                <source>project.members.options.promote.leader</source>
+                <target>Befördern zum Gruppenleiter</target>
+            </trans-unit>
+            <trans-unit id="project.members.options.promote.leader.confirm">
+                <source>project.members.options.promote.leader.confirm</source>
+                <target>Wollen Sie den Nutzer %name% wirklich zum Projektleiter befördern? Sie werden damit automatisch zum Admin degradiert.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,16 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+LearningCenterBundle:
+    resource: "@LearningCenterBundle/Resources/config/routing.yml"
+
+ContaoInstallationBundle:
+    resource: "@ContaoInstallationBundle/Resources/config/routing.yml"
+
+ContaoCoreBundle:
+    resource: "@ContaoCoreBundle/Resources/config/routing.yml"
+
+fos_message:
+    resource: "@FOSMessageBundle/Resources/config/routing.xml"
+    prefix: /learningcenter/message

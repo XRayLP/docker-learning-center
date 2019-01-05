@@ -1,0 +1,38 @@
+{% extends '@LearningCenter/base.html.twig' %}
+{% trans_default_domain 'project' %}
+
+{% block main %}
+    {% if is_granted('project.create') %}
+    <a class="btn btn-outline-primary" href="{{ url('lc_projects_create') }}">{% trans %}project.create{% endtrans %}</a>
+    {% endif %}
+    {% if showProjects %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">{% trans %}project.state{% endtrans %}</th>
+                <th scope="col">{% trans %}project.name{% endtrans %}</th>
+                <th scope="col">{% trans %}project.description{% endtrans %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for project in projects %}
+                <tr>
+                    <td>
+                        {% if project.confirmed %}
+                            <i class="fas fa-check-circle mr-1 text-success" data-toggle="tooltip" data-placement="top" title="The project has to be confirmed by a teacher!"></i>
+                        {% else %}
+                            <i class="fas fa-clock mr-1 text-danger" data-toggle="tooltip" data-placement="top" title="Project is confirmed by a teacher!"></i>
+                        {% endif %}
+                    </td>
+                    <td><a href="{{ url('lc_projects_detail', {'id': project.id })}}">{{ project.name }}</a></td>
+                    <td>{{ project.description }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+    {% if is_granted('project.list.all') %}
+        <a class="btn btn-outline-secondary" href="">{% trans %}project.list.all{% endtrans %}</a>
+    {% endif %}
+{% endblock %}
